@@ -1,0 +1,302 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garrafeira Subtilinspiração</title>
+    <meta name="author" content="João Maria Morgado">
+    <meta name="keywords" content="garrafeira, vinhos, comida, bebidas">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Serif&family=Nunito:wght@300&family=Philosopher:wght@700&family=Roboto+Slab:wght@300&display=swap"
+        rel="stylesheet">
+
+
+
+    <style>
+
+        .casaMateus:hover{
+            font-size: 2vw;
+        }
+
+        :root {
+            --main-radius: 5px;
+            --main-padding: 5px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+
+        p,li {
+            /*
+            /*font-family: 'Roboto Slab', serif;
+            font-family: 'Merriweather', serif;
+            font-family: 'Nunito', sans-serif;*/
+            font-family: 'Noto Serif', serif;
+        }
+
+        .info {
+            position: sticky;
+            align-items: baseline;
+            align-self: start;
+            margin-top: -40vw;
+            background: rgba(255, 255, 255, 0);
+            color: #000000;
+            width: 100%;
+        }
+
+        .botao {
+            height: 3vw;
+            width: 20vw;
+            border-radius: 0.5vw;
+            margin-left: 39vw;
+            background-color: rgba(255, 176, 86, 0);
+            color: black;
+            border: 2px solid #ffffff;
+        }
+
+        .botao:hover {
+            height: 3vw;
+            width: 20vw;
+            border-radius: 1vw;
+            margin-left: 39vw;
+            background-color: rgba(255, 176, 86, 0);
+            ;
+            color: black;
+            border: 2px solid #ffffff48;
+        }
+
+        .vinhos {
+            font-size: 4vw;
+        }
+
+        img:hover {
+            opacity: 50%;
+        }
+
+        figcaption {
+            font-family: 'Noto Serif', serif;
+            color: black;
+        }
+
+
+        h1 {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 500%;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 200%;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+            grid-template-areas:
+                "nav nav nav nav"
+                "content1 content1 content2 content2"
+                "content3 content3 content4 content4"
+                "content5 content5 content6 content6"
+                "footer footer footer footer";
+            grid-gap: 0.2rem;
+            font-weight: 800;
+            font-size: 12px;
+            color: #004d40;
+            text-align: center;
+        }
+
+        nav {
+            background-color: black;
+            grid-area: nav;
+            border-radius: var(--main-radius);
+            padding-top: var(--main-padding);
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+
+        nav a {
+            color: white;
+            font-size: 1.5vw;
+        }
+
+
+        #content1 {
+            color: black;
+            grid-area: content1;
+            border-radius: var(--main-radius);
+            padding-top: var(--main-padding);
+        }
+
+        #content2 {
+            background-color: rgb(250, 191, 124);
+            grid-area: content2;
+            border-radius: var(--main-radius);
+            padding-top: var(--main-padding);
+        }
+
+        #content3 {
+            background-color: rgb(250, 191, 124);
+            grid-area: content3;
+            border-radius: var(--main-radius);
+            padding-top: var(--main-padding);
+        }
+
+        #content4 {
+            color: black;
+            grid-area: content4;
+            border-radius: var(--main-radius);
+            padding-top: var(--main-padding);
+        }
+
+        #content5 {
+            color: black;
+            grid-area: content5;
+            border-radius: var(--main-radius);
+            padding-top: var(--main-padding);
+        }
+
+        #content6 {
+            background-color: rgb(250, 191, 124);
+            grid-area: content6;
+            border-radius: var(--main-radius);
+            padding-top: var(--main-padding);
+        }
+
+        footer {
+            background: #ffffff;
+            color: black;
+            grid-area: footer;
+            border-radius: var(--main-radius);
+            padding-top: var(--main-padding);
+
+        }
+
+
+        a {
+            text-align: center;
+            display: block;
+            font-family: inherit;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem;
+        }
+
+       
+
+        @media only screen and (max-width: 550px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+                grid-template-areas:
+                    "nav"
+                    "sidebar"
+                    "main"
+                    "content1"
+                    "content2"
+                    "content3"
+                    "footer";
+            }
+        }
+    </style>
+
+</head>
+
+<div class="container">
+    <nav>
+        <div class="flex-container">
+            <a class="primeiro" href="teste.html"
+                style="font-size: 23px;  font-family: 'Philosopher', sans-serif;">Garrafeira
+                <br> Subtilinspiração</a>
+            <a href="vinhos.html" style="margin-right: 40px;">Vinhos</a>
+            <a href="comida.html" style="margin-right: 40px;"><u>Comida</u></a>
+            <a href="contactos.html" style="margin-right: 40px;">Contactos</a>
+        </div>
+    </nav>
+
+
+    <div id="content1">
+        <video autoplay muted loop id="myVideo" style="width: 100%;">
+            <source src="imgs/comida.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="content2">
+        <h2>DOCES</h2>
+        <ul style="color: black; font-size: 1vw; ">
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.5vw;">Casa Mateus</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2vw;">Casa da Prisca (Sem açucar)</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.5vw;">Beesweet (Mel)</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.5vw;">Groselha - Espim</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.4vw;">Myrtilis Gourmet</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.3vw;">Vale do Mestre</li>
+        </ul>
+    </div>
+
+    <div id="content3">
+        <br> <br> <br> <br> <br> <br>
+        <h2>CHARCUTARIA</h2>
+        <ul style="color: black; font-size: 1vw; ">
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.5vw;">Bisaro</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2vw;">Beloteiros</li>
+        </ul>
+    </div>
+
+    <div id="content4">
+        <video autoplay muted loop id="myVideo" style="width: 100%;">
+            <source src="imgs/comida1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="content5">
+        <video autoplay muted loop id="myVideo" style="width: 100%;">
+            <source src="imgs/comida2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="content6">
+        <br> <br> 
+        <h2>OUTROS PRODUTOS</h2>
+        <ul style="color: black; font-size: 1vw; ">
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.5vw;">Azeites</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2vw;">Vinagres</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.5vw;">Chocolates</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.5vw;">Condimentos Cozinha</li>
+            <br>
+            <li class="casaMateus" style="overflow: hidden; margin-left: -2.4vw;">Conservas</li>
+        </ul>
+    </div>
+
+
+
+    <footer>Garrafeira subtilinspiracao, Lda</footer>
+
+
+
+
+</div>
