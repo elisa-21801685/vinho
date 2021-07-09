@@ -97,7 +97,6 @@
             font-family: 'Philosopher', sans-serif;
             font-size: 400%;
             color: rgb(255, 255, 255);
-            margin-left: 17vw;
         }
 
         span {
@@ -122,8 +121,7 @@
             grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
             grid-template-areas:
                 "nav nav nav nav"
-                "main main main main"
-                "content1 content1 content1 content1"
+                "main main content1 content1"
                 "footer footer footer footer";
             grid-gap: 0.2rem;
             font-weight: 800;
@@ -155,8 +153,8 @@
         main {
             background-color: #f3f3f3;
             background-repeat: no-repeat;
-            background-image: url('imgs/contactos.jpg');
-            background-size: 100%;
+            background-image: url('imgs/vv.jpg');
+            background-size: 125% ;
             background-position-y: -5vw;
             height: 40vw;
             grid-area: main;
@@ -166,8 +164,7 @@
 
 
         #content1 {
-            background-color: #000000;
-            color: black;
+            background-color: #be721b;
             grid-area: content1;
             border-radius: var(--main-radius);
             padding-top: var(--main-padding);
@@ -220,95 +217,7 @@
         }
     </style>
 
-    <style type="text/css">
-        fieldset.elist,
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="date"],
-        textarea,
-        select,
-        option,
-        fieldset.elist ul,
-        fieldset.elist>legend,
-        fieldset.elist input[type="text"],
-        fieldset.elist>legend:after {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-
-        textarea,
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="date"],
-        fieldset.elist ul,
-        select,
-        fieldset.elist>legend {
-            border: 2px #cccccc solid;
-            border-radius: 10px;
-        }
-
-
-
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="date"],
-        fieldset.elist,
-        select,
-        fieldset.elist>legend {
-            height: 32px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 14px;
-        }
-
-        input[type="text"]:hover,
-        input[type="email"]:hover,
-        textarea:hover,
-        select:hover,
-        fieldset.elist:hover>legend {
-            background-color: #ddddff;
-        }
-
-
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="date"],
-        fieldset.elist {
-            width: 316px;
-        }
-
-
-        fieldset {
-            border: 2px #fdfdfd solid;
-            border-radius: 10px;
-        }
-
-
-        fieldset.elist {
-            display: inline-block;
-            position: relative;
-            vertical-align: middle;
-            overflow: visible;
-            padding: 0;
-            margin: 0;
-            border: none;
-        }
-
-        fieldset.elist ul {
-            position: absolute;
-            width: 100%;
-            max-height: 320px;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-            background-color: transparent;
-        }
-    </style>
+  
 
 </head>
 
@@ -325,75 +234,56 @@
     </nav>
     <main>
 
-        <div class="slides" style="max-width:500px; margin-top: -0.5vw;">
 
-            <img class="mySlides" src="imgs/vinho1.png" style="width:266%; height: 100%;">
-            <img class="mySlides" src="imgs/vinho2.png" style="width:266%; height: 100%;">
-            <img class="mySlides" src="imgs/vinho3.png" style="width:266%; height: 100%;">
-            <h1 style="margin-top: -20vw; margin-left: 40vw;">VINHOS BRANCOS</h1>
-        </div>
-
-        <form action="mailto:subtilinspiracao@gmail.com" method="post" enctype="text/plain">
-            <fieldset
-                style="background-color: white; margin-top: 11.5vw; width: 30vw; height: 35vw; margin-left: 60vw;">
-                <p for="fname" style="color: black; font-size: 150%;">Nome (Primeiro e Ultimo):</p>
-                <input id="fname" type="text" name = "name" placeholder="João Silva"><br><br>
-                <p for="lname" style="color: black; font-size: 150%; ">Mensagem:</p>
-                <textarea type="text" name = "mensagem" id="lname" name="lname" style="height: 10vw; width: 25vw;"></textarea><br><br>
-                <input type="submit" value="Submit" style="background-color:rgb(0, 0, 0); color: rgb(255, 255, 255);">
-            </fieldset>
-        </form>
-
-        <h1 style="margin-top: -6vw; margin-left: -16vw;">CONTACTE-NOS</h1>
+        
 
 
     </main>
 
     <div id="content1">
-        <p style="font-family: 'Philosopher', sans-serif; font-size: 1vw; color: white; margin-left: -50vw;">
+        <h1>CONTACTE-NOS</h1>
+        <p style="font-family: 'Philosopher', sans-serif; font-size: 1.5vw; color: white; text-align: center;">
             EMAIL:
         </p>
 
         <p
-            style="font-family: 'Nunito', sans-serif; font-size: 1vw; color: white; margin-left: -33vw; margin-top: -2.3vw;">
+            style="font-family: 'Nunito', sans-serif; font-size: 1.2vw; color: white;text-align: center;">
             subtilinspiracao@gmail.com
         </p>
 
         <br>
-        <br>
 
         <p
-            style="font-family: 'Philosopher', sans-serif; font-size: 1vw; color: white; margin-left: -47vw; margin-top: -2.1vw;">
+            style="font-family: 'Philosopher', sans-serif; font-size: 1.5vw; color: white; text-align: center; ">
             TELEMOVEL:
         </p>
 
         <p
-            style="font-family: 'Nunito', sans-serif; font-size: 1vw; color: white; margin-left: -34vw; margin-top: -2.3vw;">
+            style="font-family: 'Nunito', sans-serif; font-size: 1vw; color: white; text-align: center;">
             219330991
         </p>
 
         <br>
-        <br>
 
         <p
-            style="font-family: 'Philosopher', sans-serif; font-size: 1vw; color: white; margin-left: -48.5vw; margin-top: -2.1vw;">
+            style="font-family: 'Philosopher', sans-serif; font-size: 1.5vw; color: white; text-align: center;">
             MORADA:
         </p>
 
         <a href="https://www.google.com/maps/place/Subtilinspira%C3%A7%C3%A3o+Garrafeira/@38.8000638,-9.1804875,17z/data=!3m1!4b1!4m5!3m4!1s0xd192d5a715da873:0x511fa0453f3044ef!8m2!3d38.8000888!4d-9.1783005?ucbcb=1"
             target="_blank">
             <p
-                style="font-family: 'Nunito', sans-serif; font-size: 1vw; color: white; margin-left: -13vw; margin-top: -2.3vw;">
+                style="font-family: 'Nunito', sans-serif; font-size: 1vw; color: white; text-align: center;">
                 Rua Vieira Da Silva, nº 7 Loja 7A, Quinta Nova, 2675-611 Odivelas
             </p>
         </a>
 
         <a href="https://www.instagram.com/garrafeirasubtilinspiracao/" target="_blank">
-            <img src="imgs/intalogo.png" style="height: 3vw; margin-left: 40vw; margin-top: -5vw;">
+            <img src="imgs/intalogo.png" style="height: 5vw; margin-left: -9vw; margin-top: 0vw;">
         </a>
 
         <a href="https://www.facebook.com/garrafeira.subtilinspiracao" target="_blank">
-            <img src="imgs/facelogo.png" style="height: 3vw; margin-left: 51vw; margin-top: -6.2vw;">
+            <img src="imgs/facelogo.png" style="height: 5vw; margin-left: 10vw; margin-top: -6vw;">
         </a>
 
 

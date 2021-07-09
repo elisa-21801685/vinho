@@ -31,7 +31,7 @@
             color: black;
         }
 
-        input {
+        span {
             font-family: 'Noto Serif', serif;
 
         }
@@ -483,6 +483,83 @@
             margin-top: 5vw;
         }
 
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-size: 15px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #ff785659;
+            border-radius: 0.5rem;
+            margin-left: 920px;
+            margin-top: -20px;
+            font-family: 'Noto Serif', serif;
+        }
+
+
+        /* The actual popup */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 185px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+            font-size: 13px;
+            font-family: 'Noto Serif', serif;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         @media only screen and (max-width: 550px) {
             .container {
                 grid-template-columns: 1fr;
@@ -541,7 +618,14 @@
         </div>
 
         <span onclick="openNav()">&#9776; Tipo de Vinho</span>
+
         <h2><u>ALENTEJO</u></h2>
+        <div class="popup" onclick="myFunction()">PARA ENCOMENDAR!
+            <span class="popuptext" id="myPopup">Mande mail para: subtilinspiracao@gmail.com</span>
+        </div>
+
+        <br><br><br><br>
+
 
         <script>
             function openNav() {
@@ -557,159 +641,108 @@
             }
         </script>
 
+        <script>
+            // When the user clicks on div, open the popup
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+
         <div class="card">
-            <form action="mailto:subtilinspiracao@gmail.com">
-                <img src="imgs/volteFace2015.png" style="width:25%; height: 60%;">
-                <h1 class="vinho1">Volte Face 2015</h1>
-                <p class="price">10.90€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-                <br>
-            </form>
+            <img src="imgs/volteFace2015.png" style="width:25%; height: 60%;">
+            <h1 class="vinho1">Volte Face 2015</h1>
+            <p class="price">10.90€</p>
+            <br>
         </div>
 
 
 
         <div class="card1">
-            <form action="mailto:subtilinspiracao@gmail.com">
-                <img src="imgs/dezTotoes2016.png" style="width:15%; height: 60%;">
-                <h1 class="vinho1">Dez Tostões 2016</h1>
-                <p class="price">10.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-                <br>
-            </form>
+            <img src="imgs/dezTotoes2016.png" style="width:15%; height: 60%;">
+            <h1 class="vinho1">Dez Tostões 2016</h1>
+            <p class="price">10.99€</p>
+            <br>
         </div>
 
 
         <div class="card2">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/fadoReserva2014.png" style="width:17%; height: 60%;">
-                <h1 class="vinho1">Fado Reserva 2014</h1>
-                <p class="price">14.50€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-                <br>
-            </form>
+            <img src="imgs/fadoReserva2014.png" style="width:17%; height: 60%;">
+            <h1 class="vinho1">Fado Reserva 2014</h1>
+            <p class="price">14.50€</p>
+            <br>
         </div>
 
         <div class="card3">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/herdadeDasServas.png" style="width:17%; height: 62%;">
-                <h1 class="vinho1">Herdade das Servas</h1>
-                <p class="price">6.00€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-                <br>
-            </form>
+            <img src="imgs/herdadeDasServas.png" style="width:17%; height: 62%;">
+            <h1 class="vinho1">Herdade das Servas</h1>
+            <p class="price">6.00€</p>
+            <br>
         </div>
 
         <div class="card4">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/coelheirosChardonnay.png" style="width:20%; height: 60%;">
-                <h1 class="vinho1">Coelheiros Chardonnay</h1>
-                <p class="price">47.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-                <br>
-            </form>
+            <img src="imgs/coelheirosChardonnay.png" style="width:20%; height: 60%;">
+            <h1 class="vinho1">Coelheiros Chardonnay</h1>
+            <p class="price">47.99€</p>
+            <br>
 
         </div>
 
         <div class="card5">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/athaydeReserva.png" style="width:20%; height: 60%;">
-                <h1 class="vinho1">Athayde Reserva</h1>
-                <p class="price">14.90€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
-                <br>
-            </form>
+            <img src="imgs/athaydeReserva.png" style="width:20%; height: 60%;">
+            <h1 class="vinho1">Athayde Reserva</h1>
+            <p class="price">14.90€</p>
+            <br>
         </div>
 
         <div class="card6">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/peraManca.png" style="width:20%; height: 60%;">
-                <h1 class="vinho1">Pera-Manca</h1>
-                <p class="price">47.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
-                <br>
-            </form>
+            <img src="imgs/peraManca.png" style="width:20%; height: 60%;">
+            <h1 class="vinho1">Pera-Manca</h1>
+            <p class="price">47.99€</p>
+            <br>
         </div>
 
         <div class="card7">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/freixoTerroir.png" style="width:20%; height: 60%;">
-                <h1 class="vinho1">Freixo Terroir</h1>
-                <p class="price">10.50€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
+            <img src="imgs/freixoTerroir.png" style="width:20%; height: 60%;">
+            <h1 class="vinho1">Freixo Terroir</h1>
+            <p class="price">10.50€</p>
+            <br>
 
-                <br>
-            </form>
         </div>
 
         <div class="card8">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/vidigueiraDoc.png" style="width:20%; height: 60%;">
-                <h1 class="vinho1">Vidigueira Doc</h1>
-                <p class="price">4.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
-                <br>
-            </form>
+            <img src="imgs/vidigueiraDoc.png" style="width:20%; height: 60%;">
+            <h1 class="vinho1">Vidigueira Doc</h1>
+            <p class="price">4.99€</p>
+            <br>
         </div>
 
         <div class="card9">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/EAbranco.png" style="width:20%; height: 60%;">
-                <h1 class="vinho1">EA Branco</h1>
-                <p class="price">5.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
-                <br>
-            </form>
+            <img src="imgs/EAbranco.png" style="width:20%; height: 60%;">
+            <h1 class="vinho1">EA Branco</h1>
+            <p class="price">5.99€</p>
+            <br>
         </div>
 
         <div class="card10">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/srDoutorFieldBlend.png" style="width:25%; height: 60%;">
-                <h1 class="vinho1">Sr Doutor Field Blend </h1>
-                <p class="price">9.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
-                <br>
-            </form>
+            <img src="imgs/srDoutorFieldBlend.png" style="width:25%; height: 60%;">
+            <h1 class="vinho1">Sr Doutor Field Blend </h1>
+            <p class="price">9.99€</p>
+            <br>
         </div>
 
         <div class="card11">
-            <form action="mailto:subtilinspiracao@gmail.com" method="get">
-                <img src="imgs/paçoDosInfantesAntão.png" style="width:20%; height: 60%;">
-                <h1 class="vinho1">Paço Dos Infantes Antão</h1>
-                <p class="price">14.50€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
-                <br>
-            </form>
+            <img src="imgs/paçoDosInfantesAntão.png" style="width:20%; height: 60%;">
+            <h1 class="vinho1">Paço Dos Infantes Antão</h1>
+            <p class="price">14.50€</p>
+            <br>
         </div>
 
         <div class="card12">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
-                <img src="imgs/convésBranco.png" style="width:20%; height: 60%;">
-                <h1 class="vinho1">Convés Branco</h1>
-                <p class="price">5.50€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
-                <br>
-            </form>
+            <img src="imgs/convésBranco.png" style="width:20%; height: 60%;">
+            <h1 class="vinho1">Convés Branco</h1>
+            <p class="price">5.50€</p>
+            <br>
         </div>
 
 

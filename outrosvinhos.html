@@ -474,6 +474,83 @@
             margin-top: 5vw;
         }
 
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-size: 15px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #ff785659;
+            border-radius: 0.5rem;
+            margin-left: 920px;
+            margin-top: -20px;
+            font-family: 'Noto Serif', serif;
+        }
+
+
+        /* The actual popup */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 185px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+            font-size: 13px;
+            font-family: 'Noto Serif', serif;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         @media only screen and (max-width: 550px) {
             .container {
                 grid-template-columns: 1fr;
@@ -530,6 +607,12 @@
 
         <span onclick="openNav()">&#9776; Tipo de Vinho</span>
         <h2><u>BIOLÓGICO</u></h2>
+        <div class="popup" onclick="myFunction()">PARA ENCOMENDAR!
+            <span class="popuptext" id="myPopup">Mande mail para: subtilinspiracao@gmail.com</span>
+        </div>
+
+        <br><br><br><br>
+
 
         <script>
             function openNav() {
@@ -545,100 +628,87 @@
             }
         </script>
 
+        <script>
+            // When the user clicks on div, open the popup
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+
         <div class="card">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
+
             <img src="imgs/tintobarrica2012.png" style="width:15%; height: 60%; margin-top: 0.7vw;">
             <h1 class="vinho1">Tinto Barrica Doc 2012</h1>
             <p class="price">9.50€</p>
-            <input type="submit" value="Encomendar"
-            style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
             <br>
-            </form>
+
         </div>
 
         <div class="card1">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
+
             <img src="imgs/tintobarrica2013.png" style="width:16%; height: 60%; margin-top: 0.7vw;">
             <h1 class="vinho1">Tinto Reserva Doc 2013</h1>
             <p class="price">14.50€</p>
-            <input type="submit" value="Encomendar"
-            style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
             <br>
-            </form>
+
         </div>
 
         <div class="card2">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
+
             <img src="imgs/outeiros2015.png" style="width:15%; height: 60%; margin-top: 0.7vw;">
             <h1 class="vinho1">Ros Doc 2015 Outeiros</h1>
             <p class="price">8.00€</p>
-            <input type="submit" value="Encomendar"
-            style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
             <br>
-            </form>
+
         </div>
 
         <div class="card3">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
+
             <img src="imgs/tintobrancouva.png" style="width:17%; height: 60%; margin-top: 0.7vw;">
             <h1 class="vinho1">Branco de Uvas Tintas</h1>
             <p class="price">12.00€</p>
-            <input type="submit" value="Encomendar"
-            style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
             <br>
-            </form>
+
         </div>
 
         <div class="card4">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
+
             <img src="imgs/tintotalha.png" style="width:20%; height: 60%; margin-top: 0.7vw;">
             <h1 class="vinho1">Vinho tinto da Talha Doc</h1>
             <p class="price">14.99€</p>
-            <input type="submit" value="Encomendar"
-            style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
             <br>
-            </form>
+
         </div>
 
         <div class="card5">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
+
             <img src="imgs/semsulfitos.png" style="width:20%; height: 60%; margin-top: 0.7vw;">
             <h1 class="vinho1">Tinto Sem Sulfitos</h1>
             <p class="price">17.90€</p>
-            <input type="submit" value="Encomendar"
-            style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
             <br>
-            </form>
+
         </div>
 
         <div class="card6">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
+
             <img src="imgs/vinhotintodoc.png" style="width:20%; height: 60%; margin-top: 0.7vw;">
             <h1 class="vinho1">Tinto Doc</h1>
             <p class="price">9.49€</p>
-            <input type="submit" value="Encomendar"
-            style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
-
             <br>
-            </form>
+
         </div>
 
         <div class="card7">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
+
             <img src="imgs/tintotalha.png" style="width:20%; height: 60%; margin-top: 0.7vw;">
             <h1 class="vinho1">Vinho da Talha Doc</h1>
             <p class="price">14.50€</p>
             <input type="submit" value="Encomendar"
-            style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
+                style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
 
             <br>
-            </form>
+
         </div>
 
 

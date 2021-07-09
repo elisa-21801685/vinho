@@ -475,6 +475,83 @@
             margin-top: 5vw;
         }
 
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-size: 15px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #ff785659;
+            border-radius: 0.5rem;
+            margin-left: 920px;
+            margin-top: -20px;
+            font-family: 'Noto Serif', serif;
+        }
+
+
+        /* The actual popup */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 185px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+            font-size: 13px;
+            font-family: 'Noto Serif', serif;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         @media only screen and (max-width: 550px) {
             .container {
                 grid-template-columns: 1fr;
@@ -532,6 +609,11 @@
 
         <span onclick="openNav()">&#9776; Tipo de Vinho</span>
         <h2><u>MOSCATEL</u></h2>
+        <div class="popup" onclick="myFunction()">PARA ENCOMENDAR!
+            <span class="popuptext" id="myPopup">Mande mail para: subtilinspiracao@gmail.com</span>
+        </div>
+
+        <br><br><br><br>
 
         <script>
             function openNav() {
@@ -547,64 +629,57 @@
             }
         </script>
 
-        <div class="card">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
-                <img src="imgs/moscatelroxo.png" style="width:32%; height: 63%;">
-                <h1 class="vinho1">Alambre Moscatel Roxo</h1>
-                <p class="price">12.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
+        <script>
+            // When the user clicks on div, open the popup
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
 
-                <br>
-            </form>
+        <div class="card">
+
+            <img src="imgs/moscatelroxo.png" style="width:32%; height: 63%;">
+            <h1 class="vinho1">Alambre Moscatel Roxo</h1>
+            <p class="price">12.99€</p>
+            <br>
+
         </div>
 
         <div class="card1">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
-                <img src="imgs/alambre.png" style="width:25%; height: 62%; margin-top: 0.3vw;">
-                <h1 class="vinho1">Alambre</h1>
-                <p class="price">6.60€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
 
-                <br>
-            </form>
+            <img src="imgs/alambre.png" style="width:25%; height: 62%; margin-top: 0.3vw;">
+            <h1 class="vinho1">Alambre</h1>
+            <p class="price">6.60€</p>
+            <br>
+
         </div>
 
         <div class="card2">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
-                <img src="imgs/moscateljmf.png" style="width:16%; height: 60%; margin-top: 0.7vw;">
-                <h1 class="vinho1">Moscatel Setubal JMF</h1>
-                <p class="price">27.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
 
-                <br>
-            </form>
+            <img src="imgs/moscateljmf.png" style="width:16%; height: 60%; margin-top: 0.7vw;">
+            <h1 class="vinho1">Moscatel Setubal JMF</h1>
+            <p class="price">27.99€</p>
+            <br>
+
         </div>
 
         <div class="card3">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
-                <img src="imgs/moscatelfavaios.png" style="width:39%; height: 67%; margin-top: -1vw;">
-                <h1 class="vinho1">Moscatel Favaios</h1>
-                <p class="price">12.99€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
 
-                <br>
-            </form>
+            <img src="imgs/moscatelfavaios.png" style="width:39%; height: 67%; margin-top: -1vw;">
+            <h1 class="vinho1">Moscatel Favaios</h1>
+            <p class="price">12.99€</p>
+            <br>
+
         </div>
 
         <div class="card4">
-            <form action="mailto:subtilinspiracao@gmail.com" method="post">
-                <img src="imgs/moscatelfavaios.png" style="width:39%; height: 67%; margin-top: -1vw;">
-                <h1 class="vinho1">Moscatel Favaios</h1>
-                <p class="price">6.50€</p>
-                <input type="submit" value="Encomendar"
-                    style="background-color:rgb(0, 0, 0); border-radius: 0.5rem; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255)">
 
-                <br>
-            </form>
+            <img src="imgs/moscatelfavaios.png" style="width:39%; height: 67%; margin-top: -1vw;">
+            <h1 class="vinho1">Moscatel Favaios</h1>
+            <p class="price">6.50€</p>
+            <br>
+
         </div>
 
         <br>
